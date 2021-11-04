@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <script>
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+      integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+    </script>
+    <link rel = 'stylesheet' type = 'text/css' href = 'style.css'>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <link rel="shortcut icon" href="https://p5js.org/assets/img/favicon.ico" />
+    <link rel="icon" href="https://p5js.org/assets/img/favicon.ico" />
+
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+  <div class = "container">
+    <div class = "header" id = "header"><h1>HeXiLe</h1></div>
+    <div class = "inner_container">
+      <div class = "gamediv" id = "gamediv"></div>
+      <div class = "scores" id = "scores">
+        <div class = "score" id = "score1">-</div>
+        <div class = "score" id = "turn">-</div>
+        <div class = "score" id = "score2">-</div>
+        <div class = "gameurl" id = "ucontainer">Game invite:
+          <div class = gameurl_text id = "game_url">
+            <input type="text" value="" id="urlText">
+              <button onclick="copy_url()">
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class = "gameurl" style = "display: block">Rules:
+          <div class = gameurl_text style = "font-weight: normal">
+            <p>Each player places 2 tiles per turn.</p>
+            <p>Adjacent enemy tiles will be captured.</p>
+            <p>Player with most tiles when the board is full wins.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "os_text"><a class = "os" href = "https://github.com/p4stoboy/hexile">Hexile is open source.</a></div>
+  </div>
+  <div id="o_left" class="modal">
+    <div class="modal-content">
+      <p>Opponent left.<br /></p>
+      <a href = "/">Home</a>
+    </div>
+  </div>
+  <div id="win" class="modal">
+    <div class="modal-content">
+      <p>You win!<br /></p>
+      <a href = "/">Home></a>
+    </div>
+  </div>
+  <div id="lose" class="modal">
+    <div class="modal-content">
+      <p>You lose!<br /></p>
+      <a href = "/">Home</a>
+    </div>
+  </div>
+  </body>
+  <script src="build.js"></script>
+</html>

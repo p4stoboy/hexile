@@ -1,0 +1,174 @@
+:root {
+    --black: #2D2A32;
+    --white: #FAFDF6;
+    --hl: #DA4167;
+}
+
+@font-face {
+    font-family: hexkey;
+    src: url(/fonts/hexkeysolidexpand.ttf);
+}
+
+@font-face {
+    font-family: inconsolata;
+    src: url(/fonts/Inconsolata-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: inconsolata, monospace;
+}
+
+h1 {
+    font-size: 75px;
+    font-family: hexkey, monospace;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.header {
+    text-align: center;
+    padding-top: 2%;
+    width: 100%;
+    height: 15%;
+}
+
+.inner_container {
+    display: flex;
+    width: 75%;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.gamediv {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+canvas {
+    display: inline;
+}
+
+.scores {
+    width: 30%;
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 2%;
+    font-size: 22px;
+    justify-content: space-between;
+}
+
+.score {
+    width: 33%;
+    text-align: center;
+}
+
+.gameurl {
+    width: 100%;
+    display: none;
+    margin-top: 5%;
+    padding-top: 2%;
+    border-top: 1px solid var(--white);
+    font-size: 16px;
+    position: relative;
+}
+
+.gameurl_text {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.os_text {
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.os {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.os:hover {
+    color: var(--hl);
+}
+
+.os:visited {
+    color: var(--white);
+}
+
+input {
+    width: 70%;
+    padding: 1%;
+    background-color: var(--white);
+    border: none;
+    color: var(--black);
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: 1%;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+.a {
+    color: var(--black);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--black);
+}
+
+a:hover {
+    color: var(--hl);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #FAFDF6CC; /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    font-size: 24px;
+    color: var(--black);
+    text-align: center;
+    width: 100%; /* Could be more or less, depending on screen size */
+}
